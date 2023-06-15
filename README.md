@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 컴포넌트 분리
+
+Card.jsx :Card 컴포넌트는 주어진 card 객체를 기반으로 카드 형식의 UI를 렌더링합니다. 카드에는 제목, 내용, 날짜를 표시하고, 삭제 버튼과 완료 버튼이 있습니다.
+
