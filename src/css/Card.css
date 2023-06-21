@@ -1,0 +1,76 @@
+ /* 카드 css  */
+ .mainFont {
+    width: 80px;
+    height: 35px;
+    background-image: linear-gradient(to right,  #ffb300, #00fff4);
+    color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    text-align:center;
+    line-height: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  .style {
+    padding: 30px;
+    display: flex;
+    gap: 12px;
+  }
+  .doing{
+    padding-top: 20px;
+    background-color: rgb(248, 240, 230);
+  }
+  .done{
+    background-color: rgb(248, 240, 230);
+    padding-bottom: 300px;
+  }
+  .squareStyle {
+    /* 그라데이션 선 */
+    width: 350px;
+    height: 200px;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(white,white), linear-gradient(to right,  #ffb300, #00fff4);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    /* 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+   }
+  .bottomBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+  }
+  .delBtn {
+    width:70px;
+    background-color: white;
+    border-color:#ffb300;
+    border-radius: 6px;
+    margin-right:3px;
+  }
+  .delBtn:hover {
+    background-color: #ffb300;
+    border-color:transparent;
+    color:white;
+    font-weight: 800;
+    margin-top: -0.88px;
+  }
+  
+  .doneBtn {
+    width:70px;
+    background-color: white;
+    border-color:#00fff4;
+    border-radius: 6px;
+  }
+  .doneBtn:hover{
+    background-color: #00fff4;
+    border-color:transparent;
+    color: white;
+    font-weight: 800;
+    margin-top: -0.88px;
+  }
+  
