@@ -4,9 +4,9 @@ import About from "../pages/About";
 
 
 
-
 const Router = () => {
     return(
+        
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home/>}/>     

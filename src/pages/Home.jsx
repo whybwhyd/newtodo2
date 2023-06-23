@@ -3,7 +3,7 @@ import * as S from '../css/AppStyled.jsx'
 import uuid from 'react-uuid'
 import InputBox from '../component/InputBox'; //input 박스를 보여줍니다.
 import Card from '../component/Card'; //할일 카드를 보여줍니다.
-// import { TodosProvider } from '../context/TodosContext.js';
+import { TodosContext } from '../context/TodosContext.js';
 
 const Home = () => {
   const initialTodos = ([
@@ -64,12 +64,17 @@ const Home = () => {
     const newCardList = cards.filter((card) => card.id !== id );
     setCards(newCardList);
    };
+   
   const FilteredCardList = (isDone) =>
   cards
     .filter((card) => card.isDone === isDone)
     .map((card) => (
-      <Card card={card} key={card.id} handleDelete={handleDelete} handleCbtn={handleCbtn} 
-      boxTitle={boxTitle} boxContent={boxContent} boxDate={boxDate} isDone={isDone}/>
+      <TodosContext.Provider value={{
+        card, key:card.id, handleDelete, handleCbtn,
+        boxTitle, boxContent, boxDate,isDone,
+      }}>
+      <Card/>
+      </TodosContext.Provider>
     ));        
 
 
@@ -79,10 +84,11 @@ const Home = () => {
   <S.Layout>
       <S.MytodoList>MY TO DO LIST</S.MytodoList>
       {/* 인풋값을 적는 박스를 보여줍니다. */}
-      
-        <InputBox handleTitle={handleTitle} handleContent={handleContent}
-      handleDate={handleDate} handleAdd={handleAdd} 
-      boxTitle={boxTitle} boxContent={boxContent} boxDate={boxDate}/>
+      <TodosContext.Provider value={{
+         handleTitle, handleContent,handleDate, handleAdd,
+         boxTitle, boxContent, boxDate,}}>
+        <InputBox />
+      </TodosContext.Provider>
 
       <S.Doing>
           <S.MainFont>DO-ing</S.MainFont>
