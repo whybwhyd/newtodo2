@@ -5,7 +5,7 @@ import * as S from '../css/CardStyled.jsx'
 
 
 function Card (props) {
-console.log(props.card.id)
+console.log(props.handleCbtn)
   return (
     <S.SquareStyle>
       <div>
@@ -24,8 +24,8 @@ console.log(props.card.id)
         <h6>{props.card.boxDate}</h6>
 
         <S.BottomBtn>
-          <S.DelBtn onClick={() =>props.card.handleDelete(props.card.id)}>삭제</S.DelBtn>
-          <S.DoneBtn onClick={() =>props.card.handleCbtn(props.card.id)}>{props.card.isDone?"취소":"완료"}</S.DoneBtn>
+          <S.DelBtn onClick={() =>props.handleDelete(props.card.id)}>삭제</S.DelBtn>
+          <S.DoneBtn onClick={() =>props.handleCbtn(props.card.id)}>{props.card.isDone?"취소":"완료"}</S.DoneBtn>
         </S.BottomBtn>
       </div>
     </S.SquareStyle>

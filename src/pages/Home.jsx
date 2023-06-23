@@ -19,7 +19,7 @@ const Home = () => {
     const [boxTitle, setBoxTitle] = useState("");
    const [boxContent, setBoxContent] = useState("");
    const [boxDate, setBoxDate] = useState("");
-    // const [isDone, setIsDone] = useState(false);
+  const [isDone, setIsDone] = useState(false);
   
   //입력한 값을 저장하는 핸들러 함수
     const handleTitle = (event) => {setBoxTitle(event.target.value)}
@@ -69,7 +69,7 @@ const Home = () => {
     .filter((card) => card.isDone === isDone)
     .map((card) => (
       <Card card={card} key={card.id} handleDelete={handleDelete} handleCbtn={handleCbtn} 
-      boxTitle={boxTitle} boxContent={boxContent} boxDate={boxDate} />
+      boxTitle={boxTitle} boxContent={boxContent} boxDate={boxDate} isDone={isDone}/>
     ));        
 
 
