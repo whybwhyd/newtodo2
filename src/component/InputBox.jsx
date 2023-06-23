@@ -1,44 +1,41 @@
+import * as S from '../css/InputStyled.jsx'
+// import {TodosContext}from '../context/TodosContext.js'
+// import { useContext } from 'react';
 
-function Box (props) {
+function InputBox (props) {
 
       return(
-      <div className="inputBox">
-
-        <div className="boxTitle">
+      <S.InputBox>
         제목 {""}
-        <input type="text"
-          id="titleInput"
+        <S.TitleInput type="text"
           placeholder="제목을 적어주세요"
           value={props.boxTitle}
+          id="TitleInput"
           onChange={(event) => props.handleTitle(event)}/>
-        </div>
-        
-        <div className="boxContent">
+
+        <S.BoxContent>
         내용 {""}
-        <input type="text"
-          id="contentInput"
+        <S.ContentInput type="text"
           placeholder="내용을 적어주세요"
           value={props.boxContent}
+          id="ContentInput"
           onChange={(event) => props.handleContent(event)}/>
-        </div>
+        </S.BoxContent>
 
-        <div className="boxDate">
+        <S.BoxDate>
          날짜 {""}
-        <input type="text"
-          id="dateInput"
+        <S.DateInput type="text"
           placeholder="yy/mm/dd"
           value={props.boxDate}
-          onChange={(event) => props.handleDate(event)}/>
-        </div>
-        <button 
-        onClick={() => props.handleAdd()}
-        id="addBtn"
-        >추가하기</button>
-
-
-
-      </div>
+          id="DateInput"
+          onChange={(event) => props.handleDate(event)}
+         />
+        </S.BoxDate>
+        <S.AddBtn
+        onClick={() =>props.handleAdd()}
+        >추가하기</S.AddBtn> 
+      </S.InputBox>
     );
 }
-      export default Box;
+      export default InputBox;
 

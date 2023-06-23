@@ -1,22 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import * as S from '../css/CardStyled.jsx'
+// import {TodosContext} from '../context/TodosContext.js'
 
-function Card(props) {
-  // 할일의 완료 여부(isdone)에 따라 버튼 이름을 Doing칸에는 완료, Done 칸에는 취소로 바꿈.
-  const btnName = props.card.isdone ? '취소' : '완료'
 
+function Card (props) {
+console.log(props.card.id)
   return (
-    <div className="squareStyle">
+    <S.SquareStyle>
       <div>
+
         <h3>{props.card.boxTitle}</h3>
+        
         <h5>{props.card.boxContent}</h5>
+        <Link to='/About' state={{
+          id:`${props.card.id}`,
+          boxTitle:`${props.card.boxTitle}`,
+          boxContent:`${props.card.boxContent}`,
+          boxDate:`${props.card.boxDate}`
+          }}>
+        <h5>상세보기</h5>
+        </Link>   
         <h6>{props.card.boxDate}</h6>
 
-        <div className="bottomBtn">
-          <button className="delBtn" onClick={() => props.handleDelete(props.card.id)}>삭제</button>
-          <button className="doneBtn" onClick={() => props.handleCbtn(props.card.id)}>{btnName}</button>
-        </div>
+        <S.BottomBtn>
+          <S.DelBtn onClick={() =>props.card.handleDelete(props.card.id)}>삭제</S.DelBtn>
+          <S.DoneBtn onClick={() =>props.card.handleCbtn(props.card.id)}>{props.card.isDone?"취소":"완료"}</S.DoneBtn>
+        </S.BottomBtn>
       </div>
-    </div>
+    </S.SquareStyle>
   );
 }
 
