@@ -1,7 +1,6 @@
 import React, { useContext }  from 'react';
 import { Link } from 'react-router-dom';
 import * as S from '../css/CardStyled.jsx'
-import {TodosContext} from '../context/TodosContext.js'
 
 
 function Card () {
