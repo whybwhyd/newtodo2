@@ -2,28 +2,6 @@ import { styled } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-const Display = styled.div`
-display: grid;
-align-items: center;
-justify-content: center;
- `   
-const DetailCard = styled.div`
-border: 2px solid black;
-background-color:lightyellow;
-padding-top: 30px;
-padding-bottom:0;
-margin: 100px;
-width: 700px;
-height:400px;
- `   
-const Text = styled.div`
-text-align:center;
-  `   
-const Comeback= styled.button`
-margin-left:30px;
-margin-bottom:20px;
-`
-  
 function About() {
 const location = useLocation()
 const navigate= useNavigate()
@@ -53,3 +31,25 @@ const navigate= useNavigate()
   }
   
   export default About;
+  
+  const Display = styled.div`
+display: grid;
+align-items: center;
+justify-content: center;
+ `   
+const DetailCard = styled.div`
+border: 2px solid black;
+background-color:lightyellow;
+padding-top: 30px;
+padding-bottom:0;
+margin: 100px;
+width: 700px;
+height:400px;
+ `   
+const Text = styled.div`
+text-align:center;
+  `   
+const Comeback= styled.button`
+margin-left:30px;
+margin-bottom:20px;
+`

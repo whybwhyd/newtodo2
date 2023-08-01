@@ -11,11 +11,6 @@ align-items: center;
 justify-content: center;
 font-weight: bold;
 `
-export const BoxContent = styled.div`
-margin-left: 20px;`
-
-export const BoxDate= styled.div`
-margin-left: 10px;`
 
 export const TitleInput= styled.input`
   border: 3px solid transparent;
@@ -26,6 +21,7 @@ export const TitleInput= styled.input`
   width: 250px;
   height: 25px;
   margin-left: 10px;
+  margin-right:10px;
   text-align: center;
   &:focus{
  outline:3px solid orange;
@@ -43,7 +39,8 @@ export const ContentInput= styled.input`
   border-color:transparent;
   width: 250px;
   height: 25px;
-  margin: 0px 10px 0px 10px;
+  margin-left:10px;
+  margin-right:10px;
   text-align: center;
   &:focus{
   outline:3px solid orange;
@@ -75,7 +72,7 @@ export const AddBtn= styled.button`
   color: white;
   border:2px solid white;
   border-radius: 10px;
-  margin-left: 30px;
+  margin-left: 20px;
   font-weight: bold;
   &:hover{
   background-image: linear-gradient(to right,  #c78c00, #00b9af);
